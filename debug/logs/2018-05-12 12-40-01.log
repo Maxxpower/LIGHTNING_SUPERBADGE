@@ -1,0 +1,27 @@
+36.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+12:39:54.0 (325228)|USER_INFO|[EXTERNAL]|0051r000007Pnq4|maxxpower992@resourceful-goat-209670.com|Ora standard dell’Europa centrale|GMT+02:00
+12:39:54.0 (369692)|EXECUTION_STARTED
+12:39:54.0 (375261)|CODE_UNIT_STARTED|[EXTERNAL]|0661r000002jwVr|VF: /apex/SpeakerForm
+12:39:54.0 (396112)|CODE_UNIT_STARTED|[EXTERNAL]|VF Controller Save
+12:39:54.0 (423843)|CODE_UNIT_FINISHED|VF Controller Save
+12:39:54.0 (29779909)|VF_SERIALIZE_VIEWSTATE_BEGIN|0661r000002jwVr
+12:39:54.0 (92176379)|VF_SERIALIZE_VIEWSTATE_END
+12:39:54.94 (94218297)|CUMULATIVE_LIMIT_USAGE
+12:39:54.94 (94218297)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:39:54.94 (94218297)|CUMULATIVE_LIMIT_USAGE_END
+
+12:39:54.0 (94263239)|CODE_UNIT_FINISHED|VF: /apex/SpeakerForm
+12:39:54.0 (94992374)|EXECUTION_FINISHED

@@ -1,0 +1,45 @@
+30.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: List<Hotel__c> l = [SELECT ID, Location__latitude__s, Location__longitude__s from Hotel__c LIMIT 1];
+13:09:55.2 (2296496)|USER_INFO|[EXTERNAL]|0051r000007Pnq4|maxxpower992@resourceful-goat-209670.com|Ora standard dell’Europa centrale|GMT+02:00
+13:09:55.2 (2318425)|EXECUTION_STARTED
+13:09:55.2 (2323701)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+13:09:55.2 (2536551)|VARIABLE_SCOPE_BEGIN|[1]|l|List<Hotel__c>|true|false
+13:09:55.2 (2661748)|HEAP_ALLOCATE|[72]|Bytes:3
+13:09:55.2 (2704754)|HEAP_ALLOCATE|[77]|Bytes:152
+13:09:55.2 (2722870)|HEAP_ALLOCATE|[342]|Bytes:408
+13:09:55.2 (2742874)|HEAP_ALLOCATE|[355]|Bytes:408
+13:09:55.2 (2754254)|HEAP_ALLOCATE|[467]|Bytes:48
+13:09:55.2 (2780939)|HEAP_ALLOCATE|[139]|Bytes:6
+13:09:55.2 (2796620)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+13:09:55.2 (2886935)|STATEMENT_EXECUTE|[1]
+13:09:55.2 (2890215)|STATEMENT_EXECUTE|[1]
+13:09:55.2 (2894169)|HEAP_ALLOCATE|[1]|Bytes:78
+13:09:55.2 (2915521)|HEAP_ALLOCATE|[1]|Bytes:4
+13:09:55.2 (2966941)|HEAP_ALLOCATE|[50]|Bytes:5
+13:09:55.2 (2991735)|HEAP_ALLOCATE|[56]|Bytes:5
+13:09:55.2 (2998381)|HEAP_ALLOCATE|[64]|Bytes:7
+13:09:55.2 (3196069)|SOQL_EXECUTE_BEGIN|[1]|Aggregations:0|SELECT ID, Location__latitude__s, Location__longitude__s FROM Hotel__c LIMIT 1
+13:09:55.2 (16185057)|SOQL_EXECUTE_END|[1]|Rows:1
+13:09:55.2 (16208465)|HEAP_ALLOCATE|[1]|Bytes:8
+13:09:55.2 (16225317)|HEAP_ALLOCATE|[1]|Bytes:152
+13:09:55.2 (16269041)|HEAP_ALLOCATE|[1]|Bytes:8
+13:09:55.2 (16327455)|VARIABLE_ASSIGNMENT|[1]|l|[{"Id":"a061r000015BXQKAA4","Location__Latitude__ (1 more) ...":37.7851430,"Location__Longitude_ (2 more) ...":-122.4101370}]|0xae74da7
+13:09:55.16 (16356382)|CUMULATIVE_LIMIT_USAGE
+13:09:55.16 (16356382)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:09:55.16 (16356382)|CUMULATIVE_LIMIT_USAGE_END
+
+13:09:55.2 (16394113)|CODE_UNIT_FINISHED|execute_anonymous_apex
+13:09:55.2 (17117945)|EXECUTION_FINISHED

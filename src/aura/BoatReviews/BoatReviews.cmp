@@ -1,0 +1,77 @@
+<aura:component controller="BoatReviews">
+  <aura:attribute name="boat" type="Boat__c"/>
+  <aura:attribute name="boatReviews" type="BoatReview__c[]" access="private"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <aura:handler name="change" value="{!v.boat}" action="{!c.refresh}"/>
+  <aura:method name="refresh" description="Refresh the reviews view on update on records" action="{!c.refresh}" access="public"/>
+
+
+
+<ui:scrollerWrapper class="scrollerSize">
+        <!--Scrollable content here -->
+<aura:If isTrue="{!v.boatReviews.length!=0}">
+<aura:iteration items="{!v.boatReviews}" var="boatReview">
+  <!--ITERATION ON FEEDS-->
+
+  <div class="slds-feed">
+	<ul class="slds-feed__list">
+		<li class="slds-feed__item">
+			<article class="slds-post">
+				<header class="slds-post__header slds-media">
+					<div class="slds-media__figure">
+						<a href="javascript:void(0);" class="slds-avatar slds-avatar_circle slds-avatar_large">
+							<img alt="Jason Rodgers" src="{!boatReview.CreatedBy.SmallPhotoUrl}" title="{!boatReview.CreatedBy.Name + 'avatar'}" />
+						</a>
+					</div>
+					<div class="slds-media__body">
+						<div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+							<p>
+								<a href="javascript:void(0);" title="{!boatReview.CreatedBy.Name}" data-userid="{!boatReview.CreatedBy.Id}" onclick="{!c.onUserInfoClick}">{!boatReview.CreatedBy.Name}</a> —
+								{!boatReview.CreatedBy.CompanyName}
+							</p>
+              <div>
+                <p>
+                  <lightning:formattedDateTime value="{!boatReview.CreatedDate}" year="numeric" month="short" day="numeric" hour="2-digit" minute="2-digit" hour12="true"/>
+                </p>
+              </div>
+
+							<!-- <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-x-small"
+aria-haspopup="true" title="More Options"> -->
+								<!-- <svg class="slds-button__icon" aria-hidden="true">
+									<use
+										xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
+									</svg> -->
+									<!-- <span class="slds-assistive-text">More Options</span>
+								</button> -->
+							</div>
+							<!-- <p class="slds-text-body_small">
+								<a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link_reset">5 days Ago</a>
+							</p> -->
+						</div>
+					</header>
+					<div class="slds-post__content slds-text-longform">
+						<p>
+              {!boatReview.Comment__c}
+						</p>
+					</div>
+					<footer class="slds-post__footer">
+                <c:FiveStarRating aura:id="FiveStarRating" value="{!boatReview.Rating__c}" readonly="true"/>
+					</footer>
+							</article>
+							</li>
+						</ul>
+			</div>
+</aura:iteration>
+</aura:If>
+<aura:If isTrue="{!v.boatReviews.length==0}">
+  <lightning:layoutItem class="slds-align_absolute-center" flexibility="auto" padding="around-small">
+      <ui:outputText value="No Reviews Available" />
+  </lightning:layoutItem>
+</aura:If>
+</ui:scrollerWrapper>
+
+
+
+
+
+</aura:component>

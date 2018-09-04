@@ -1,0 +1,60 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+  <aura:attribute name="boat" type="Boat__c"/>
+  <aura:attribute name="Id" type="Id"/>
+  <!-- <aura:attribute name="selectedTab" type="String"/> -->
+
+  <!--NIENTE NAME NEGLI HANDLER PER EVENTI APPLICATION-->
+  <aura:handler event="c:BoatSelected" action="{!c.onBoatSelected}"/>
+  <aura:handler name="BoatReviewAdded" event="c:BoatReviewAdded" action="{!c.onBoatReviewAdded}"/>
+
+<aura:attribute name="boatRecord" type="Object"/>
+<aura:attribute name="boatRecordError" type="String"/>
+<aura:attribute name="fieldsToQuery" type="String[]"
+  default=
+  "['Id','Name','Description__c','Price__c','Length__c',
+  'Contact__r.Name','Contact__r.Email','Contact__r.HomePhone',
+  'BoatType__r.Name','Picture__c']"
+  />
+
+  <force:recordData aura:id="service"
+          targetRecord="{!v.boatRecord}"
+          targetFields="{!v.boat}"
+          recordId="{!v.Id}"
+          fields="Id,Name,Description__c,Price__c,Length__c,
+          Contact__r.Name,Contact__r.Email,Contact__r.HomePhone,
+          BoatType__r.Name,Picture__c"
+          recordUpdated="{!c.onRecordUpdated}"
+          targetError="{v.boatRecordError}"
+          layoutType="FULL"
+          mode="EDIT"
+          />
+
+
+<lightning:card>
+  <aura:If isTrue="{!v.boat!=null}">
+    <lightning:tabset aura:id="details">
+        <lightning:tab label="Details">
+            <c:BoatDetail boat="{!v.boat}"/>
+        </lightning:tab>
+        <lightning:tab label="Reviews" aura:id="boatreviewtab" id="boatreviewtab">
+            <c:BoatReviews boat="{!v.boat}" aura:id="reviewComp"/>
+        </lightning:tab>
+        <lightning:tab label="Add Review" >
+            <c:AddBoatReview boat="{!v.boat}"/>
+        </lightning:tab>
+    </lightning:tabset>
+  </aura:If>
+
+<aura:If isTrue="{!not(empty(v.boatRecordError))}">
+  <div class="recordError">
+    {!v.boatRecordError}
+  </div>
+
+</aura:If>
+
+</lightning:card>
+
+
+
+</aura:component>

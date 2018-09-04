@@ -1,0 +1,18 @@
+{
+    "projectName": "SUPERBADGE LIGHTNING ORG",
+    "username": "maxxpower992@resourceful-goat-209670.com",
+    "id": "14833d80-4bb1-11e8-96bb-196ffaa7ad86",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://resourceful-goat-209670-dev-ed.my.salesforce.com",
+    "workspace": "C:\\Users\\Francesco\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

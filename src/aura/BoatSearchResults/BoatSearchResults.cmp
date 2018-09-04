@@ -1,0 +1,32 @@
+<aura:component controller="BoatSearchResults">
+	<aura:method name="search" description="public method that reads event parameters from parent component">
+			<aura:attribute name="boatTypeId" type="String"/>
+	</aura:method>
+	<aura:handler name="init" value="{!this}" action="{!c.doSearch}"/>
+	<aura:handler name="BoatSelect" event="c:BoatSelect" action="{!c.onBoatSelect}"/>
+
+	<aura:attribute name="boats" type="Boat__c[]"/>
+	<aura:attribute name="boatType" type="String" default=""/>
+	<aura:attribute name="selectedBoatId" type="String"/>
+
+	<lightning:card class="slds-m-bottom_x-small" title="Results">
+
+	<lightning:layout multipleRows="true" horizontalAlign="center">
+
+		<aura:iteration items="{!v.boats}" var="boat">
+			<lightning:layoutItem flexibility="grow">
+				<c:BoatTile boat="{!boat}" selected="{!boat.Id==v.selectedBoatId?true:false}"/>
+			</lightning:layoutItem>
+		</aura:iteration>
+
+		<aura:If isTrue="{!v.boats.length==0}">
+			<lightning:layoutItem class="slds-align_absolute-center" flexibility="auto" padding="around-small">
+				<ui:outputText value="No boats found"/>
+			</lightning:layoutItem>
+		</aura:If>
+
+	</lightning:layout>
+</lightning:card>
+
+
+</aura:component>

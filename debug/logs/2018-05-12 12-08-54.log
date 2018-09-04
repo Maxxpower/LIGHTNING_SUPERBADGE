@@ -1,0 +1,49 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: Session__c session=new Session__c(Name='Advanced Apex', Level__c='Advanced');
+Execute Anonymous: insert session;
+12:08:47.1 (1050283)|USER_INFO|[EXTERNAL]|0051r000007Pnq4|maxxpower992@resourceful-goat-209670.com|Ora standard dell’Europa centrale|GMT+02:00
+12:08:47.1 (1075959)|EXECUTION_STARTED
+12:08:47.1 (1080974)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+12:08:47.1 (1205072)|VARIABLE_SCOPE_BEGIN|[1]|session|Session__c|true|false
+12:08:47.1 (1398768)|HEAP_ALLOCATE|[72]|Bytes:3
+12:08:47.1 (1425719)|HEAP_ALLOCATE|[77]|Bytes:152
+12:08:47.1 (1445191)|HEAP_ALLOCATE|[342]|Bytes:408
+12:08:47.1 (1458948)|HEAP_ALLOCATE|[355]|Bytes:408
+12:08:47.1 (1469584)|HEAP_ALLOCATE|[467]|Bytes:48
+12:08:47.1 (1493840)|HEAP_ALLOCATE|[139]|Bytes:6
+12:08:47.1 (1510650)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+12:08:47.1 (1610308)|STATEMENT_EXECUTE|[1]
+12:08:47.1 (1613097)|STATEMENT_EXECUTE|[1]
+12:08:47.1 (1639609)|HEAP_ALLOCATE|[1]|Bytes:4
+12:08:47.1 (1710664)|HEAP_ALLOCATE|[1]|Bytes:13
+12:08:47.1 (1759862)|VARIABLE_ASSIGNMENT|[1]|this.Name|"Advanced Apex"|0x17c8130
+12:08:47.1 (1767375)|HEAP_ALLOCATE|[1]|Bytes:8
+12:08:47.1 (1825531)|VARIABLE_ASSIGNMENT|[1]|this.Level__c|"Advanced"|0x17c8130
+12:08:47.1 (1867978)|VARIABLE_ASSIGNMENT|[1]|session|{"Name":"Advanced Apex","Level__c":"Advanced"}|0x17c8130
+12:08:47.1 (1874717)|STATEMENT_EXECUTE|[2]
+12:08:47.1 (1907371)|HEAP_ALLOCATE|[50]|Bytes:5
+12:08:47.1 (1924683)|HEAP_ALLOCATE|[56]|Bytes:5
+12:08:47.1 (1931756)|HEAP_ALLOCATE|[64]|Bytes:7
+12:08:47.1 (1963392)|HEAP_ALLOCATE|[2]|Bytes:8
+12:08:47.1 (1984130)|DML_BEGIN|[2]|Op:Insert|Type:Session__c|Rows:1
+12:08:47.1 (2013873)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:08:47.1 (26444230)|DML_END|[2]
+12:08:47.28 (28788326)|CUMULATIVE_LIMIT_USAGE
+12:08:47.28 (28788326)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:08:47.28 (28788326)|CUMULATIVE_LIMIT_USAGE_END
+
+12:08:47.1 (28838032)|CODE_UNIT_FINISHED|execute_anonymous_apex
+12:08:47.1 (29704635)|EXECUTION_FINISHED

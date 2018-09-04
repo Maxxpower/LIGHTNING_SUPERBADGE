@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+	<aura:handler name="formsubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/>
+
+	<c:BoatSearchForm ></c:BoatSearchForm>
+  <c:BoatSearchResults aura:id="searchResultsCMP"></c:BoatSearchResults>
+
+</aura:component>
